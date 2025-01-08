@@ -14,7 +14,7 @@
 
 int	small_nbr(t_stack_a **stack_a, t_data *data, int index)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i <= index)

@@ -38,7 +38,8 @@ static void	add_args_to_list_bonus(t_stack_a **stack_a, t_data *data)
 	}
 }
 
-void	read_lines_and_execute_utils(t_stack_a **stack_a, t_stack_b **stack_b, char *str)
+void	read_lines_and_execute_utils(t_stack_a **stack_a, t_stack_b **stack_b,
+		char *str)
 {
 	if (ft_strncmp(str, "sa\n", ft_strlen(str)) == 0)
 		swap_stack_a(stack_a);
@@ -66,7 +67,8 @@ void	read_lines_and_execute_utils(t_stack_a **stack_a, t_stack_b **stack_b, char
 		print_message("Error\n", 2);
 }
 
-void	read_lines_and_execute(t_stack_a **stack_a, t_stack_b **stack_b, t_data *data)
+void	read_lines_and_execute(t_stack_a **stack_a, t_stack_b **stack_b,
+		t_data *data)
 {
 	data->line = get_next_line(0);
 	while (data->line != NULL)

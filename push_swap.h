@@ -88,26 +88,24 @@ int						reverse_rotate_stack_b(t_stack_b **stack_b);
 
 int						sa(t_stack_a **stack_a);
 int						sb(t_stack_b **stack_b);
-int						ss(t_stack_a **stack_a,
-						t_stack_b **stack_b, int index);
+int						ss(t_stack_a **stack_a, t_stack_b **stack_b, int index);
 int						pa(t_stack_a **stack_a, t_stack_b **stack_b);
 int						pb(t_stack_a **stack_a, t_stack_b **stack_b);
 int						ra(t_stack_a **stack_a);
 int						rb(t_stack_b **stack_b);
-int						rr(t_stack_a **stack_a,
-						t_stack_b **stack_b, int index);
+int						rr(t_stack_a **stack_a, t_stack_b **stack_b, int index);
 int						rra(t_stack_a **stack_a);
 int						rrb(t_stack_b **stack_b);
-int						rrr(t_stack_a **stack_a,
-						t_stack_b **stack_b, int index);
+int						rrr(t_stack_a **stack_a, t_stack_b **stack_b,
+							int index);
 
 void					sort_few_elements(t_stack_a **stack_a,
 							t_stack_b **stack_b, t_data data);
 int						check_stack_sort(t_stack_a *stack_a);
 
-void					push_to_b(t_stack_a **stack_a,
-							t_stack_b **stack_b, t_data *data);
-void					push_to_a(t_stack_a **stack_a,
-							t_stack_b **stack_b, t_data data);
+void					push_to_b(t_stack_a **stack_a, t_stack_b **stack_b,
+							t_data *data);
+void					push_to_a(t_stack_a **stack_a, t_stack_b **stack_b,
+							t_data data);
 
 #endif
