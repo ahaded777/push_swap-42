@@ -88,7 +88,7 @@ int	main(int ac, char **av)
 	stack_a = NULL;
 	stack_b = NULL;
 	if (ac == 1)
-		exit(EXIT_FAILURE);
+		exit(0);
 	initialize_structures(&data);
 	split_argv(ac, av, &data);
 	check_args(av, &data);
