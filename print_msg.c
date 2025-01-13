@@ -20,3 +20,15 @@ void	print_message(char *message, int fd)
 	else
 		exit(EXIT_SUCCESS);
 }
+
+void	print_message_and_free(char *message, t_stack_a **stack_a,
+	t_stack_b **stack_b, int fd)
+{
+	free_stack_a(stack_a);
+	free_stack_b(stack_b);
+	ft_putstr_fd(message, fd);
+	if (fd == 2)
+		exit(EXIT_FAILURE);
+	else
+		exit(EXIT_SUCCESS);
+}

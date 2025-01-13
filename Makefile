@@ -10,7 +10,7 @@ OBJS = $(SRCS:.c=.o)
 SRCS_BONUS = push_swap_bonus.c initialize_structures.c free.c stack_operations_utils.c \
 	stack_operations.c print_msg.c sort.c push_swap_utils.c stack_operations_utils2.c \
 	stack_operations_utils3.c sort_utils.c sort_utils2.c sort_utils3.c push_swap_utils2.c \
-	algo.c $(PATH_GET_LINE)/get_next_line.c $(PATH_GET_LINE)/get_next_line_utils.c
+	algo.c $(PATH_GET_LINE)/get_next_line.c $(PATH_GET_LINE)/get_next_line_utils.c push_swap_bonus_utils.c
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 # LIBFT
@@ -21,7 +21,7 @@ AR_LIBFT = $(PATH_LIBFT)/libft.a
 PATH_GET_LINE = ./libft/get_next_line
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 

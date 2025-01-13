@@ -76,6 +76,15 @@ int						sort_element(t_stack_a **stack_a, t_stack_b **stack_b,
 							t_data data);
 void					check_args(char **av, t_data *data);
 void					add_args_to_list(t_stack_a **stack_a, t_data *data);
+void					print_message_and_free(char *message,
+							t_stack_a **stack_a, t_stack_b **stack_b, int fd);
+void					new_nodes_bonus(t_stack_a **stack_a, char *str);
+void					add_args_to_list_bonus(t_stack_a **stack_a,
+							t_data *data);
+int						read_lines_and_execute_utils3(t_stack_a **stack_a,
+							t_stack_b **stack_b, t_data *data);
+int						read_lines_and_execute_utils2(t_stack_a **stack_a,
+							t_stack_b **stack_b, t_data *data);
 
 int						swap_stack_a(t_stack_a **stack_a);
 int						swap_stack_b(t_stack_b **stack_b);

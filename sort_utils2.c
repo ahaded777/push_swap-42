@@ -17,7 +17,7 @@ int	check_stack_sort(t_stack_a *stack_a)
 	t_stack_a	*tmp;
 
 	tmp = stack_a;
-	if (!stack_a || !stack_a->next)
+	if (!stack_a)
 		return (42);
 	while (tmp->next)
 	{
