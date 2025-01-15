@@ -6,7 +6,7 @@
 /*   By: aahaded <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:54:10 by aahaded           #+#    #+#             */
-/*   Updated: 2025/01/08 17:05:20 by aahaded          ###   ########.fr       */
+/*   Updated: 2025/01/15 17:46:51 by aahaded          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,10 @@ int	read_lines_and_execute_utils(t_stack_a **stack_a, t_stack_b **stack_b,
 		push_stack_a(stack_a, stack_b);
 		return (0);
 	}
-	read_lines_and_execute_utils2(stack_a, stack_b, data);
-	return (1);
+	return (read_lines_and_execute_utils2(stack_a, stack_b, data));
 }
 
-void	read_lines_and_execute(t_stack_a **stack_a, t_stack_b **stack_b,
+int	read_lines_and_execute(t_stack_a **stack_a, t_stack_b **stack_b,
 		t_data *data)
 {
 	data->line = get_next_line(0);
@@ -49,11 +48,12 @@ void	read_lines_and_execute(t_stack_a **stack_a, t_stack_b **stack_b,
 		{
 			free(data->line);
 			ft_putstr_fd("Error\n", 2);
-			return ;
+			return (-1);
 		}
 		free(data->line);
 		data->line = get_next_line(0);
 	}
+	return (0);
 }
 
 int	main(int ac, char **av)
@@ -70,11 +70,11 @@ int	main(int ac, char **av)
 	split_argv(ac, av, &data);
 	check_args(av, &data);
 	add_args_to_list_bonus(&stack_a, &data);
-	read_lines_and_execute(&stack_a, &stack_b, &data);
-	if (check_stack_sort(stack_a) == 1 && stack_b == NULL)
+	if (read_lines_and_execute(&stack_a, &stack_b, &data) == -1)
+		free_stack_all(&stack_a, &stack_b, data, 2);
+	if (check_stack_sort(stack_a) == 1 && !stack_b)
 		ft_putstr_fd("OK\n", 1);
 	else
 		ft_putstr_fd("KO\n", 2);
-	free_stack_all(&stack_a, &stack_b, data);
-	return (0);
+	free_stack_all(&stack_a, &stack_b, data, 1);
 }

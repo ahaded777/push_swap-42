@@ -6,7 +6,7 @@
 /*   By: aahaded <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 14:54:08 by aahaded         #+#    #+#             */
-/*   Updated: 2025/01/08 14:54:09 by aahaded        ###   ########.fr       */
+/*   Updated: 2025/01/15 17:45:49 by aahaded          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,12 +52,16 @@ void	free_stack_b(t_stack_b **stack_b)
 	*stack_b = NULL;
 }
 
-void	free_stack_all(t_stack_a **stack_a, t_stack_b **stack_b, t_data data)
+void	free_stack_all(t_stack_a **stack_a, t_stack_b **stack_b,
+		t_data data, int i)
 {
 	(void)stack_b;
 	free_stack_a(stack_a);
 	if (stack_b)
 		free_stack_b(stack_b);
 	free_all(data.args);
-	exit(EXIT_SUCCESS);
+	if (i == 2)
+		exit(EXIT_FAILURE);
+	else
+		exit(EXIT_SUCCESS);
 }

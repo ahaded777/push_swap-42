@@ -6,7 +6,7 @@
 /*   By: aahaded <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 14:54:33 by aahaded         #+#    #+#             */
-/*   Updated: 2025/01/08 14:54:34 by aahaded        ###   ########.fr       */
+/*   Updated: 2025/01/15 17:47:19 by aahaded          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ int	main(int ac, char **av)
 	check_args(av, &data);
 	add_args_to_list(&stack_a, &data);
 	if (check_stack_sort(stack_a) == 1 || check_stack_sort(stack_a) == 42)
-		free_stack_all(&stack_a, &stack_b, data);
+		free_stack_all(&stack_a, &stack_b, data, 1);
 	else
 		sort_few_elements(&stack_a, &stack_b, data);
-	free_stack_all(&stack_a, &stack_b, data);
+	free_stack_all(&stack_a, &stack_b, data, 1);
 }

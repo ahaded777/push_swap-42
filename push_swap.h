@@ -6,7 +6,7 @@
 /*   By: aahaded <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 14:54:37 by aahaded         #+#    #+#             */
-/*   Updated: 2025/01/08 14:54:38 by aahaded        ###   ########.fr       */
+/*   Updated: 2025/01/15 17:50:01 by aahaded          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void					free_stack_a(t_stack_a **stack_a);
 void					free_stack_b(t_stack_b **stack_b);
 void					print_message(char *message, int fd);
 void					free_stack_all(t_stack_a **stack_a, t_stack_b **stack_b,
-							t_data data);
+							t_data data, int i);
 void					split_argv(int ac, char **av, t_data *data);
 int						ft_isnotdigit(char *str);
 int						ft_atoi_(const char *str, t_stack_a **stack_a);

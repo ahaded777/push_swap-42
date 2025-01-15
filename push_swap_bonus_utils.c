@@ -82,6 +82,5 @@ int	read_lines_and_execute_utils2(t_stack_a **stack_a, t_stack_b **stack_b,
 		rotate_stack_b(stack_b);
 		return (0);
 	}
-	read_lines_and_execute_utils3(stack_a, stack_b, data);
-	return (1);
+	return (read_lines_and_execute_utils3(stack_a, stack_b, data));
 }
