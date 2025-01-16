@@ -6,7 +6,7 @@
 /*   By: aahaded <marvin@42.fr>                   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 14:54:49 by aahaded         #+#    #+#             */
-/*   Updated: 2025/01/08 14:54:50 by aahaded        ###   ########.fr       */
+/*   Updated: 2025/01/16 22:08:51 by aahaded          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void	sort_few_elements(t_stack_a **stack_a, t_stack_b **stack_b, t_data data)
 	if (data.count >= 6)
 	{
 		if (data.count >= 100)
-			data.end = data.count / 16;
+			data.end = data.count / 14;
 		else
 			data.end = data.count / 6;
 		push_to_b(stack_a, stack_b, &data);
