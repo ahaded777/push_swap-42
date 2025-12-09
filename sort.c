@@ -65,7 +65,7 @@ void	sort_few_elements(t_stack_a **stack_a, t_stack_b **stack_b, t_data data)
 	if (data.count >= 6)
 	{
 		if (data.count >= 100)
-			data.end = data.count / 14;
+			data.end = data.count / 6;
 		else
 			data.end = data.count / 6;
 		push_to_b(stack_a, stack_b, &data);
