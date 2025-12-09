@@ -64,8 +64,17 @@ void	sort_few_elements(t_stack_a **stack_a, t_stack_b **stack_b, t_data data)
 	sort_and_push_to_array(stack_a, &data);
 	if (data.count >= 6)
 	{
-		if (data.count >= 100)
+		// printf("1: %d\n", data.count);
+		if (data.count == 100)
+		{
+			// printf("2: %d\n", data.count);
 			data.end = data.count / 6;
+		}
+		if (data.count >= 500)
+		{
+			// printf("3: %d\n", data.count);
+			data.end = data.count / 14;
+		}
 		else
 			data.end = data.count / 6;
 		push_to_b(stack_a, stack_b, &data);
